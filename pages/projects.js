@@ -51,7 +51,7 @@ export default function Projects() {
                                 <CardProject
                                     title="Salary Calculator"
                                     github="https://github.com/handtevada/my-salary"
-                                    demo=""
+                                    demo="https://my-salary.raiteke.com/"
                                     blog="https://medium.com/@directorys/%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%97%E0%B8%B3%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%80%E0%B8%97%E0%B9%88%E0%B8%B2%E0%B9%84%E0%B8%AB%E0%B8%A3%E0%B9%88%E0%B9%83%E0%B8%99-1-%E0%B8%99%E0%B8%B2%E0%B8%97%E0%B8%B5-web-app-calculate-income-53dc6a3cac6b"
                                     icon={[<i className="fas fa-hand-holding-usd fa-3x"></i>]}
                                     content={[
