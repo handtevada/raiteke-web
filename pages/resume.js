@@ -76,11 +76,6 @@ export default function Resume() {
                             <p className="subtitle">
                                 <span className="component-title">Resume</span>
                                 <span> | Experience timeline. </span>
-                                <span>
-                                    <a href="mailto:keerati.dir@gmail.com" className="resume-request">
-                                        Request CV
-                                    </a>
-                                </span>
                             </p>
                             <div>
 
@@ -88,12 +83,20 @@ export default function Resume() {
                             <div className="columns">
                                 <Timeline events={events} />
                             </div>
+                            <div className="resume-request is-size-4">
+                                <a href="mailto:keerati.dir@gmail.com">
+                                    Request More Info CV
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div >
             </div>
             <style jsx>{`
                 .resume-request {
+                    text-align: center;
+                }
+                .resume-request a {
                     background-color: #eaeaea;
                     border-radius: 8px;
                     padding: 0 10px 0 10px;
