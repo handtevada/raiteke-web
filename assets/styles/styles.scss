@@ -17,6 +17,12 @@ body {
     text-align: center;
 }
 
+@media screen and (max-width: 1023px) {
+    .web-footer {
+        display: none;
+    }
+}
+
 .component {
     margin-top: 30px;
 }
