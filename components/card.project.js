@@ -35,9 +35,12 @@ export default function CardProject(props) {
                     min-height: 200px;
                 }
                 .card-header {
-                    background-color: #e8e8e8;
+                    background-color: #3185ed;
                     box-shadow: none;
                     border-radius: 10px 10px 0 0;
+                }
+                .card-header-title {
+                    color: #fff;
                 }
             `}</style>
         </>
