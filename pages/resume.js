@@ -74,7 +74,7 @@ export default function Resume() {
                     <div className="tile is-parent">
                         <div className="tile is-child box component-box">
                             <p className="subtitle">
-                                <span className="component-title">Resume</span>
+                                <span className="component-title">RESUME</span>
                                 <span> | Experience timeline. </span>
                             </p>
                             <div>

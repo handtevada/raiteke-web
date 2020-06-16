@@ -7,7 +7,7 @@ export default function Contact() {
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
                     <div className="tile is-child box component-box">
-                        <p className="subtitle"><span className="component-title">Contact</span><span> | Find me if you can.</span></p>
+                        <p className="subtitle"><span className="component-title">CONTACT</span><span> | Find me if you can.</span></p>
                         <div className="columns">
                             <div className="column">
                                 <CardContact
