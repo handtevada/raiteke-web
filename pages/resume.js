@@ -60,8 +60,9 @@ export default function Resume() {
     },
     {
       date: new Date(2020, 8, 2),
-      text: `I have switched a jobs type from permanent to outsource. I thought it's challenge me to learn outsource employee work style. 
-            Here i have worked from home 3 week per month. I don't have to face the congestion of public services in Bangkok anymore.`,
+      text: `I have switched a job type from permanent to outsourcing. It's challenge me to learn outsource employee work style. 
+            Here I work as Full stack developer (React JS & Node JS). My team have worked from home 3 week per month. 
+            So I don't have to face the congestion of public services in Bangkok anymore.`,
       title: 'Start working Outsource at True Corp',
       buttonText: '',
       imageUrl: '/img/resume/true.svg',
