@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Timeline from 'react-image-timeline';
 import moment from 'moment';
 
 export default function Resume() {
+  useEffect(() => {
+    document.title = 'RESUME | RAITEKE';
+  }, []);
+
   const events = [
     {
       date: new Date(1990, 10, 21),

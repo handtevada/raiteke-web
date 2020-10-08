@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function NotFound() {
+  useEffect(() => {
+    document.title = '404 | RAITEKE';
+  }, []);
+
   return (
     <section className='hero is-medium is-bold'>
       <div className='hero-body'>
