@@ -1,55 +1,49 @@
 body {
-    font-family: 'Titillium Web', sans-serif;
-    background-image: url("../img/bg.jpg");
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url('../img/bg.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .web-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #4a4a4a;
-    text-align: center;
-}
-
-@media screen and (max-width: 1023px) {
-    .web-footer {
-        display: none;
-    }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #4a4a4a;
+  text-align: center;
 }
 
 .component {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .component-title {
-    color: #217fed;
-    font-weight: 700 !important;
+  color: #217fed;
+  font-weight: 700 !important;
 }
 
 .component-box {
-    overflow: scroll;
-    height: calc(100vh - 200px);
-    opacity: 0.95;
+  overflow: scroll;
+  height: calc(100vh - 200px);
+  opacity: 0.95;
 }
 
 .margin-top-10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .margin-top-20 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .margin-right-5 {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .align-center {
-    text-align: center;
+  text-align: center;
 }
