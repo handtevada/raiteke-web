@@ -15,6 +15,6 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-image-timeline": "^3.2.13",
-    "sass": "^1.29.0"
+    "sass": "^1.30.0"
   }
 }

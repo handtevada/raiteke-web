@@ -16,19 +16,19 @@ export default function Home() {
             </div>
             <div className='index-social'>
               <a href='https://twitter.com/Algobaleno'>
-                <i className='fab fa-twitter fa-3x' />
+                <img src='/img/contact/twitter.svg' alt='twitter' width='50' height='50' />
               </a>
               <a href='https://www.instagram.com/directorysc/'>
-                <i className='fab fa-instagram fa-3x' />
+                <img src='/img/contact/instagram.svg' alt='instagram' width='50' height='50' />
               </a>
               <a href='https://github.com/handtevada'>
-                <i className='fab fa-github fa-3x' />
+                <img src='/img/contact/github.svg' alt='github' width='50' height='50' />
               </a>
               <a href='https://www.linkedin.com/in/keerati-yuonghirun-45a23967/'>
-                <i className='fab fa-linkedin fa-3x' />
+                <img src='/img/contact/linkedin.svg' alt='linkedin' width='50' height='50' />
               </a>
               <a href='https://www.facebook.com/directorys/'>
-                <i className='fab fa-facebook fa-3x' />
+                <img src='/img/contact/facebook.svg' alt='facebook' width='50' height='50' />
               </a>
             </div>
           </div>
@@ -44,6 +44,9 @@ export default function Home() {
         }
         .index-social a:hover {
           color: #3273dc;
+        }
+        img {
+          opacity: 0.8;
         }
       `}</style>
     </>

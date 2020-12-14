@@ -19,19 +19,18 @@ export default function Contact() {
               <div className='column'>
                 <CardContact
                   key='Twitter'
-                  icon={[<i className='fab fa-twitter fa-3x' />]}
+                  icon='/img/contact/twitter.svg'
                   link='https://twitter.com/Algobaleno'
                   title='Twitter'
                   content={[
-                    'I love twitter. Love to read fast news. Retweet only awesome and cute. Follow me ',
-                    <a href='#'>@Algobaleno</a>,
+                    'I love twitter. Love to read fast news. Retweet only awesome and cute.',
                   ]}
                 />
               </div>
               <div className='column'>
                 <CardContact
                   key='Instagram'
-                  icon={[<i className='fab fa-instagram fa-3x' />]}
+                  icon='/img/contact/instagram.svg'
                   link='https://www.instagram.com/directorysc/'
                   title='Instagram'
                   content={[
@@ -44,7 +43,7 @@ export default function Contact() {
               <div className='column'>
                 <CardContact
                   key='GitHub'
-                  icon={[<i className='fab fa-github fa-3x' />]}
+                  icon='/img/contact/github.svg'
                   link='https://github.com/handtevada'
                   title='GitHub'
                   content='This is the place to store all of my personal code.'
@@ -53,7 +52,7 @@ export default function Contact() {
               <div className='column'>
                 <CardContact
                   key='LinkedIn'
-                  icon={[<i className='fab fa-linkedin fa-3x' />]}
+                  icon='/img/contact/linkedin.svg'
                   link='https://www.linkedin.com/in/keerati-yuonghirun-45a23967/'
                   title='LinkedIn'
                   content='A long time ago that I had not logged in.'
@@ -64,7 +63,7 @@ export default function Contact() {
               <div className='column'>
                 <CardContact
                   key='Facebook'
-                  icon={[<i className='fab fa-facebook fa-3x' />]}
+                  icon='/img/contact/facebook.svg'
                   link='https://www.facebook.com/directorys/'
                   title='Facebook'
                   content='I stopped being a Facebook addict for a long time. 
@@ -74,10 +73,10 @@ export default function Contact() {
               <div className='column'>
                 <CardContact
                   key='Email'
-                  icon={[<i className='fas fa-paper-plane fa-3x' />]}
+                  icon='/img/contact/email.svg'
                   link='mailto:keerati.dir@gmail.com'
                   title='Email'
-                  content='I actually have many emails. But this email is probably the most official'
+                  content='I have many emails. But this email is probably the most official'
                 />
               </div>
             </div>

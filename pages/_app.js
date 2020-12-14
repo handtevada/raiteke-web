@@ -52,10 +52,7 @@ export default function App({ Component, pageProps }) {
         </div>
       </section>
 
-      <footer className='web-footer is-size-6'>
-        @2020 | Photo by Vincent Guth on Unsplash | Inspire{' '}
-        <a href='https://github.com/apsychogirl/portfolio'>apsychogirl</a>
-      </footer>
+      <footer className='web-footer is-size-6'>@2020 | Photo by Vincent Guth on Unsplash</footer>
     </div>
   );
 }

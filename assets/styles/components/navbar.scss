@@ -1,0 +1,27 @@
+.logo-web {
+  font-weight: 700;
+}
+.logo-web span {
+  color: #2080ee;
+}
+a.navbar-item:hover {
+  background-color: transparent;
+}
+a.navbar-item:focus {
+  background-color: transparent;
+}
+.navbar-web {
+  background-color: transparent;
+}
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    padding: 0.5rem 0;
+    opacity: 0.9;
+    position: fixed;
+    overflow-y: auto;
+    right: 15px;
+    left: 15px;
+  }
+}
