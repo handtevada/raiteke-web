@@ -5,6 +5,8 @@ export default function About() {
     document.title = 'ABOUT | RAITEKE';
   }, []);
 
+  const currentDate = new Date();
+
   return (
     <div className='component'>
       <div className='tile is-ancestor'>
@@ -128,7 +130,7 @@ export default function About() {
             </div>
             <p className='subtitle'>
               <span className='component-title'>INTERESTS</span>
-              <span> | For 2020.</span>
+              <span>{` | For ${currentDate.getFullYear()}.`}</span>
             </p>
             <div className='columns'>
               <div className='column' style={{ display: 'flex' }}>
@@ -144,8 +146,8 @@ export default function About() {
                 <span style={{ padding: '10px' }}>Politics</span>
               </div>
               <div className='column' style={{ display: 'flex' }}>
-                <i className='fas fa-utensils fa-3x margin-right-5'></i>
-                <span style={{ padding: '10px' }}>Foods</span>
+                <i className='fas fa-rocket fa-3x margin-right-5'></i>
+                <span style={{ padding: '10px' }}>Start Up</span>
               </div>
             </div>
           </div>
