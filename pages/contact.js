@@ -1,88 +1,33 @@
-import React, { useEffect } from 'react';
-import CardContact from '../components/card.contact';
+import React from 'react';
 
-export default function Contact() {
-  useEffect(() => {
-    document.title = 'CONTACT | RAITEKE';
-  }, []);
+import Paper from 'components/paper.container';
+import CardContact from 'components/card.contact';
 
+import metaDictionary from 'utils/constants/meta';
+import contact from 'utils/constants/contact';
+
+const Contact = () => {
   return (
-    <div className='component'>
-      <div className='tile is-ancestor'>
-        <div className='tile is-parent'>
-          <div className='tile is-child box component-box'>
-            <p className='subtitle'>
-              <span className='component-title'>CONTACT</span>
-              <span> | Find me if you can.</span>
-            </p>
-            <div className='columns'>
-              <div className='column'>
-                <CardContact
-                  key='Twitter'
-                  icon='/img/contact/twitter.svg'
-                  link='https://twitter.com/Algobaleno'
-                  title='Twitter'
-                  content={[
-                    'I love twitter. Love to read fast news. Retweet only awesome and cute.',
-                  ]}
-                />
-              </div>
-              <div className='column'>
-                <CardContact
-                  key='Instagram'
-                  icon='/img/contact/instagram.svg'
-                  link='https://www.instagram.com/directorysc/'
-                  title='Instagram'
-                  content={[
-                    "I used to want to be a photographer. But I think i'm too lazy After that, I didn't post much.",
-                  ]}
-                />
-              </div>
-            </div>
-            <div className='columns'>
-              <div className='column'>
-                <CardContact
-                  key='GitHub'
-                  icon='/img/contact/github.svg'
-                  link='https://github.com/handtevada'
-                  title='GitHub'
-                  content='This is the place to store all of my personal code.'
-                />
-              </div>
-              <div className='column'>
-                <CardContact
-                  key='LinkedIn'
-                  icon='/img/contact/linkedin.svg'
-                  link='https://www.linkedin.com/in/keerati-yuonghirun-45a23967/'
-                  title='LinkedIn'
-                  content='A long time ago that I had not logged in.'
-                />
-              </div>
-            </div>
-            <div className='columns'>
-              <div className='column'>
-                <CardContact
-                  key='Facebook'
-                  icon='/img/contact/facebook.svg'
-                  link='https://www.facebook.com/directorys/'
-                  title='Facebook'
-                  content='I stopped being a Facebook addict for a long time. 
-                                    Use Facebook as a login tool, but I love Messenger.'
-                />
-              </div>
-              <div className='column'>
-                <CardContact
-                  key='Email'
-                  icon='/img/contact/email.svg'
-                  link='mailto:keerati.dir@gmail.com'
-                  title='Email'
-                  content='I have many emails. But this email is probably the most official'
-                />
-              </div>
-            </div>
+    <section className='py-6'>
+      <Paper title='Contact' desc='Find me if you can.'>
+        <div className='pt-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            {contact.map((contact) => {
+              return <CardContact key={contact.title} {...contact} />;
+            })}
           </div>
         </div>
-      </div>
-    </div>
+      </Paper>
+    </section>
   );
+};
+
+export async function getStaticProps() {
+  return {
+    props: {
+      meta: metaDictionary.contact,
+    },
+  };
 }
+
+export default Contact;

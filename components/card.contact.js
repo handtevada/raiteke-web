@@ -1,38 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { IconContext } from 'react-icons';
 
-export default function CardContact(props) {
+const CardContact = ({ link, title, content, icon }) => {
   return (
-    <>
-      <a className='card-contact' href={props.link} target='_blank'>
-        <div className='card'>
-          <div className='content'>
-            <div className='columns'>
-              <div className='column is-one-fifth align-center card-contact-icon'>
-                <img src={props.icon} alt={props.title} />
-              </div>
-              <div className='column'>
-                <h1>{props.title}</h1>
-                <p>{props.content}</p>
-              </div>
-            </div>
-          </div>
+    <a href={link} target='_blank'>
+      <div className='group flex items-center p-4 bg-gradient-to-r from-white rounded-xl'>
+        <div className='p-2 md:p-4'>
+          <IconContext.Provider value={{ color: '#363636', size: '3em' }}>
+            {icon}
+          </IconContext.Provider>
         </div>
-      </a>
-      <style jsx>{`
-        .card {
-          border-radius: 10px;
-          min-height: 150px;
-          padding: 1.5rem;
-        }
-        .card-contact-icon {
-          color: #4a4a4a;
-          max-width: 100px;
-        }
-        .card:hover {
-          background-color: #f1f1f1;
-          border-radius: 10px;
-        }
-      `}</style>
-    </>
+        <div className='grow'>
+          <h4 className='font-bold group-hover:-translate-y-2 transition ease-in-out duration-700 text-xl'>
+            {title}
+          </h4>
+          <p className='font-light'>{content}</p>
+        </div>
+      </div>
+    </a>
   );
-}
+};
+
+CardContact.prototype = {
+  link: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.string,
+  icon: PropTypes.node,
+};
+
+export default CardContact;

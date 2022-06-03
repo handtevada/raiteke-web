@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  color: #363636;
+  background-image: url('/img/bg.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.paper__container {
+  height: calc(100vh - 130px);
+}
+

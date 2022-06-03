@@ -1,51 +1,52 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { IconContext } from 'react-icons';
 
-export default function CardProject(props) {
+const CardProject = ({ title, github, demo, blog, icon, content }) => {
   return (
-    <>
-      <div className='card'>
-        <header className='card-header'>
-          <p className='card-header-title'>{props.title}</p>
-        </header>
-        <div className='card-content'>
-          <div className='content'>
-            <div className='columns'>
-              <div className='column is-one-third align-center'>
-                <img src={props.icon} alt={props.title} />
-              </div>
-              <div className='column'>{props.content}</div>
-            </div>
+    <div>
+      <div className='bg-gradient-to-r from-white p-4 rounded-md'>
+        <div className='flex flex-row h-20'>
+          <div className='flex-none pr-2'>
+            <IconContext.Provider value={{ color: '#363636', size: '3em' }}>
+              {icon}
+            </IconContext.Provider>
+          </div>
+          <div className='grow'>
+            <h4 className='font-bold'>{title}</h4>
+            <p className='text-sm'>{content}</p>
           </div>
         </div>
-        <footer className='card-footer'>
-          <a href={props.blog} className='card-footer-item' target='_blank'>
-            Blog
-          </a>
-          <a href={props.github} className='card-footer-item' target='_blank'>
-            GitHub
-          </a>
-          <a href={props.demo} className='card-footer-item' target='_blank'>
-            Demo
-          </a>
-        </footer>
+        <div className='flex justify-left gap-4'>
+          {blog && (
+            <a href={blog} target='_blank'>
+              <button className='hover:text-sky-500 font-medium'>Blog</button>
+            </a>
+          )}
+
+          {github && (
+            <a href={github} target='_blank'>
+              <button className='hover:text-sky-500 font-medium'>Github</button>
+            </a>
+          )}
+          {demo && (
+            <a href={demo} target='_blank'>
+              <button className='hover:text-sky-500 font-medium'>Demo</button>
+            </a>
+          )}
+        </div>
       </div>
-      <style jsx>{`
-        .card {
-          border-radius: 10px;
-        }
-        .card-content {
-          min-height: 180px;
-          border-radius: 10px;
-        }
-        .card-header {
-          background-color: #3185ed;
-          box-shadow: none;
-          border-radius: 10px 10px 0 0;
-        }
-        .card-header-title {
-          color: #fff;
-        }
-      `}</style>
-    </>
+    </div>
   );
-}
+};
+
+CardProject.prototype = {
+  title: PropTypes.string.isRequired,
+  github: PropTypes.string,
+  demo: PropTypes.string,
+  blog: PropTypes.string,
+  icon: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
+
+export default CardProject;

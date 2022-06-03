@@ -1,54 +1,39 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { IconContext } from 'react-icons';
 
-export default function Home() {
-  useEffect(() => {
-    document.title = 'HOME | RAITEKE';
-  }, []);
+import metaDictionary from 'utils/constants/meta';
+import socialList from 'utils/constants/social';
 
+const Home = () => {
   return (
-    <>
-      <section className='hero is-medium is-bold'>
-        <div className='hero-body'>
-          <div className='container'>
-            <div>
-              <h1 className='title is-size-1'>Keerati Yuonghirun</h1>
-              <h2 className='subtitle'>Software Engineer (Full Stack Developer)</h2>
-            </div>
-            <div className='index-social'>
-              <a href='https://twitter.com/Algobaleno'>
-                <img src='/img/contact/twitter.svg' alt='twitter' width='50' height='50' />
-              </a>
-              <a href='https://www.instagram.com/directorysc/'>
-                <img src='/img/contact/instagram.svg' alt='instagram' width='50' height='50' />
-              </a>
-              <a href='https://github.com/handtevada'>
-                <img src='/img/contact/github.svg' alt='github' width='50' height='50' />
-              </a>
-              <a href='https://www.linkedin.com/in/keerati-yuonghirun-45a23967/'>
-                <img src='/img/contact/linkedin.svg' alt='linkedin' width='50' height='50' />
-              </a>
-              <a href='https://www.facebook.com/directorys/'>
-                <img src='/img/contact/facebook.svg' alt='facebook' width='50' height='50' />
-              </a>
-            </div>
-          </div>
+    <section className='px-8 py-64'>
+      <div className='flex flex-col justify-center'>
+        <div>
+          <h1 className='text-4xl font-semibold mb-2'>Keerati Yuonghirun</h1>
+          <h2 className='text-md'>Software Engineer (Full Stack Developer)</h2>
         </div>
-      </section>
-      <style jsx>{`
-        .index-social {
-          margin-top: 40px;
-        }
-        .index-social a {
-          padding-right: 10px;
-          color: #4a4a4a;
-        }
-        .index-social a:hover {
-          color: #3273dc;
-        }
-        img {
-          opacity: 0.8;
-        }
-      `}</style>
-    </>
+        <div className='flex py-6'>
+          {socialList.map((social) => {
+            return (
+              <a key={social.link} href={social.link} className='pr-3'>
+                <IconContext.Provider value={{ color: '#363636', size: '3em' }}>
+                  {social.icon}
+                </IconContext.Provider>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
+};
+
+export async function getStaticProps() {
+  return {
+    props: {
+      meta: metaDictionary.home,
+    },
+  };
 }
+
+export default Home;

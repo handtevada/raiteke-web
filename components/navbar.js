@@ -1,57 +1,63 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function Navbar() {
-  const toggleStyles = () => {
-    document.querySelector('.navbar-burger').classList.toggle('is-active');
-    document.querySelector('.navbar-menu').classList.toggle('is-active');
+import { IconContext } from 'react-icons';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { RiCloseFill } from 'react-icons/ri';
+
+import menuList from 'utils/constants/menu';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
   };
 
-  const menuList = [
-    { href: '/', name: 'Home' },
-    { href: '/about', name: 'About Us' },
-    { href: '/resume', name: 'Resume' },
-    { href: '/projects', name: 'Projects' },
-    { href: '/blogs', name: 'Blogs' },
-    { href: '/contact', name: 'Contact' },
-  ];
-
   return (
-    <>
-      <nav className='navbar navbar-web' role='navigation' aria-label='main navigation'>
-        <div className='navbar-brand'>
-          <Link href='/'>
-            <a className='navbar-item is-size-3 logo-web'>
-              RAITEKE<span>.</span>
-            </a>
-          </Link>
-          <a
-            role='button'
-            className='navbar-burger burger'
-            aria-label='menu'
-            aria-expanded='false'
-            data-target='navbarBasic'
-            onClick={toggleStyles}
-          >
-            <span aria-hidden='true' />
-            <span aria-hidden='true' />
-            <span aria-hidden='true' />
+    <div className='relative'>
+      <nav className='flex justify-between items-center'>
+        <Link href='/'>
+          <a className='text-4xl font-bold'>
+            RAITEKE<span className='text-sky-500'>.</span>
           </a>
+        </Link>
+        <div className='hidden md:block'>
+          {menuList.map((item, index) => {
+            return (
+              <Link key={index} href={item.href}>
+                <a key={index} className='p-2 hover:text-sky-500'>
+                  {item.name}
+                </a>
+              </Link>
+            );
+          })}
         </div>
-        <div id='navbarBasic' className='navbar-menu'>
-          <div className='navbar-end'>
-            {menuList.map((item, index) => {
-              return (
-                <Link key={index} href={item.href}>
-                  <a key={index} className='navbar-item is-size-5' onClick={toggleStyles}>
-                    {item.name}
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
+        <div className='sm:block md:hidden'>
+          <IconContext.Provider value={{ size: '2em' }}>
+            {isOpen ? (
+              <RiCloseFill onClick={handleClick} />
+            ) : (
+              <GiHamburgerMenu onClick={handleClick} />
+            )}
+          </IconContext.Provider>
         </div>
       </nav>
-    </>
+      {isOpen && (
+        <div className='p-4 absolute bg-white/90 w-full'>
+          {menuList.map((item, index) => {
+            return (
+              <Link key={index} href={item.href}>
+                <a key={index} className='hover:text-sky-500'>
+                  <p className='p-2 my-2 rounded-sm bg-gray-200'>{item.name}</p>
+                </a>
+              </Link>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
-}
+};
+
+export default Navbar;

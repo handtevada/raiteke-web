@@ -1,46 +1,27 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function CardBlog(props) {
-    return (
-        <>
-            <div className="card">
-                <header className="card-header">
-                    <p className="card-header-title">
-                        {props.title}
-                    </p>
-                </header>
-                <div className="card-content">
-                    <div className="content">
-                        <div className="columns">
-                            <div className="column is-two-fifths">
-                                <img src={props.thumbnail} alt="blog logo" />
-                            </div>
-                            <div className="column">
-                                <p>{props.content}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <footer className="card-footer">
-                    <a href={props.link} className="card-footer-item" target="_blank">View</a>
-                </footer>
-            </div>
-            <style jsx>{`
-                .card {
-                    border-radius: 10px;
-                }
-                .card-content {
-                    min-height: 200px;
-                }
-                .card-header {
-                    background-color: #3185ed;
-                    box-shadow: none;
-                    border-radius: 10px 10px 0 0;
-                }
-                .card-header-title {
-                    color: #fff;
-                }
-            `}</style>
-        </>
-    )
-}
+const CardBlog = ({ title, thumbnail, link, content }) => {
+  return (
+    <a href={link} target='_blank'>
+      <div className='bg-gradient-to-r from-white p-4 rounded-md'>
+        <div className='grid grid-cols-3 gap-2'>
+          <img src={thumbnail} alt={title} />
+          <div className='col-span-2'>
+            <h4 className='font-bold'>{title}</h4>
+            <p className='text-sm'>{content}</p>
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+CardBlog.prototype = {
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired,
+};
+
+export default CardBlog;
