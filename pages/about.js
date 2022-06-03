@@ -64,7 +64,7 @@ const About = () => {
               {skills.map((skill) => {
                 const powerStyle = { width: `${skill.power}%` };
                 return (
-                  <div>
+                  <div key={skill.title}>
                     <p className='mb-2 font-light'>{skill.title}</p>
                     <div className='w-full bg-gray-200 h-1'>
                       <div className='bg-sky-500 h-1' style={powerStyle}></div>
@@ -86,7 +86,10 @@ const About = () => {
             <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
               {interests.map((interest) => {
                 return (
-                  <div className='flex flex-row items-center gap-4 bg-gradient-to-r from-gray-100 p-2 rounded-xl'>
+                  <div
+                    key={interest.title}
+                    className='flex flex-row items-center gap-4 bg-gradient-to-r from-gray-100 p-2 rounded-xl'
+                  >
                     <span>
                       <IconContext.Provider value={{ color: '#363636', size: '3em' }}>
                         {interest.icon}

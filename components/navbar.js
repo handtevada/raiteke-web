@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { IconContext } from 'react-icons';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -8,10 +9,16 @@ import { RiCloseFill } from 'react-icons/ri';
 import menuList from 'utils/constants/menu';
 
 const Navbar = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleNavigation = (path) => {
+    setIsOpen(false);
+    router.push(path);
   };
 
   return (
@@ -44,14 +51,16 @@ const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <div className='p-4 absolute bg-white/90 w-full'>
+        <div className='p-4 absolute bg-white/90 w-full z-50'>
           {menuList.map((item, index) => {
             return (
-              <Link key={index} href={item.href}>
-                <a key={index} className='hover:text-sky-500'>
-                  <p className='p-2 my-2 rounded-sm bg-gray-200'>{item.name}</p>
-                </a>
-              </Link>
+              <div
+                key={index}
+                className='hover:text-sky-500'
+                onClick={() => handleNavigation(item.href)}
+              >
+                <p className='p-2 my-2 rounded-sm bg-gray-200'>{item.name}</p>
+              </div>
             );
           })}
         </div>
