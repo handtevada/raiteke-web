@@ -7,7 +7,7 @@ const events = [
     iconStyle: { background: '#fff', color: '#fff' },
     date: '21 Nov 1990',
     desc: 'I was born in Bangkok, Thailand.',
-    title: 'Born',
+    title: 'The Beginning',
     icon: <MdChildCare />,
   },
   {
