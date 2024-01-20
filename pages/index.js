@@ -6,7 +6,7 @@ import socialList from 'utils/constants/social';
 
 const Home = () => {
   return (
-    <section className='px-8 py-64'>
+    <section className='px-8 py-64 paper__container'>
       <div className='flex flex-col justify-center'>
         <div>
           <h1 className='text-4xl font-semibold mb-2'>Keerati Yuonghirun</h1>
