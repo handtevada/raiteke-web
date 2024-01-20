@@ -6,16 +6,16 @@ const events = [
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '21 Nov 1990',
-    desc: 'I was born in Bangkok, Thailand.',
-    title: 'The Beginning',
+    desc: 'I hail from Bangkok, Thailand.',
+    title: 'The beginning of life',
     icon: <MdChildCare />,
   },
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '01 Aug 2012',
-    desc: `While I was studying Computer Engineering, 
-            I am an intern at TESA Hyper Camp 2012. Here I learn a lot about embedded system. 
-            I have tried to build a project about voice recognition.`,
+    desc: `During my studies in Computer Engineering, I interned at TESA Hyper Camp 2012, 
+    where I gained valuable experience in embedded systems. 
+    This opportunity allowed me to delve into the intricacies of voice recognition technology.`,
     title: 'Internship at TESA',
     image: '/img/resume/tesa.png',
     icon: <AiOutlineRead />,
@@ -23,7 +23,7 @@ const events = [
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '01 Mar 2013',
-    desc: 'Graduating in computer engineering at Naresuan University, Pitsanulok, Thailand.',
+    desc: "Graduated with a bachelor's degree Computer Engineering at Naresuan University Phitsanulok Province, Thailand",
     title: "Graduate Bachelor's Degree",
     image: '/img/resume/nulogo.png',
     icon: <AiOutlineRead />,
@@ -31,9 +31,9 @@ const events = [
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '01 Aug 2013',
-    desc: `I worked in role Java developer. Developing web app for finance business. 
-            I learned a lot about Jira and Linux cause here we used Ubuntu for develop project.
-            My responsibility was develop part of loan and payment modules.`,
+    desc: `I held the position of a Java Developer, specializing in the development of web applications for the finance sector. 
+    During my tenure, I gained valuable insights into tools such as Jira and Linux, as we utilized Ubuntu for project development. 
+    My primary responsibilities included the development of specific components within the loan and payment modules.`,
     title: 'Start working at AR Soft Co., Ltd.',
     image: '/img/resume/ar.png',
     icon: <BsBriefcase />,
@@ -41,8 +41,9 @@ const events = [
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '01 Feb 2015',
-    desc: `I switched programming language from Java to .Net C#. I think It's just different syntax. 
-            I worked here for many years, Have worked on many projects. Here the team is strong and nice.`,
+    desc: `I made the switch from Java to .Net C#. Over the years, 
+    I've accumulated extensive experience working on various projects in this domain. 
+    The team here is not only strong but also exceptionally pleasant to work with.`,
     title: 'Start working at Clicknext Co., Ltd.',
     image: '/img/resume/clicknext.png',
     icon: <BsBriefcase />,
@@ -50,8 +51,9 @@ const events = [
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '01 May 2019',
-    desc: `Here is probably the dream job of many people. I work as a software engineer. 
-            Working with Cloud as GCP, DevOps, NodeJs, .Net Core more. I love culture organization here.`,
+    desc: `Software engineer. I engage with cutting-edge technologies such as GCP, DevOps, 
+    NodeJs, and .Net Core, particularly in the realm of cloud computing. 
+    The organizational culture at this workplace is something I truly cherish and love.`,
     title: 'Start working at Tangerine Co., Ltd.',
     image: '/img/resume/tangerine.png',
     icon: <BsBriefcase />,
@@ -59,11 +61,24 @@ const events = [
   {
     iconStyle: { background: '#fff', color: '#fff' },
     date: '02 Sep 2020',
-    desc: `I have switched a job type from permanent to outsourcing. It's challenge me to learn outsource employee work style. 
-            Here I work as Full stack developer (React JS & Node JS). My team have worked from home 3 week per month. 
-            So I don't have to face the congestion of public services in Bangkok anymore.`,
+    desc: `I transitioned from a permanent job to an outsourcing role, 
+    and it's been a challenge for me to adapt to the work style of an outsourced employee. 
+    In my current position as a Full Stack Developer (working with React JS & Node JS), 
+    our team operates from home three weeks out of the month. 
+    This arrangement means I no longer have to contend with the congestion of public services in Bangkok, 
+    making my work experience more efficient and enjoyable.`,
     title: 'Start working Outsource at True Corp',
     image: '/img/resume/true.svg',
+    icon: <BsBriefcase />,
+  },
+  {
+    iconStyle: { background: '#fff', color: '#fff' },
+    date: '03 April 2023',
+    desc: `I work here as senior software engineer. Going to office just one day per month, Absolutely i love it.
+    We primarily use .NET C# as our main programming language. For handling numerous transactions, we rely on Hangfire.
+    Working here presents a constant challenge for me.`,
+    title: 'Start working at Zortout Co., Ltd',
+    image: '/img/resume/zort.jpg',
     icon: <BsBriefcase />,
   },
 ];
