@@ -6,7 +6,7 @@ body {
   font-family: 'Titillium Web', sans-serif;
   color: #363636;
   background-image: url('/img/bg.jpg');
-  height: 100vh;
+  height: 100lvh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,10 +14,17 @@ body {
 }
 
 .paper__container {
-  height: calc(100vh - 130px);
+  height: calc(100lvh - 200px);
 }
 
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
+}
+
+.card__desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
 }

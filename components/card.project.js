@@ -14,7 +14,7 @@ const CardProject = ({ title, github, demo, blog, icon, content }) => {
           </div>
           <div className='grow'>
             <h4 className='font-bold'>{title}</h4>
-            <p className='text-sm'>{content}</p>
+            <p className='text-sm card__desc'>{content}</p>
           </div>
         </div>
         <div className='flex justify-left gap-4'>
