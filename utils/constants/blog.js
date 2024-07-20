@@ -1,7 +1,7 @@
 const blogs = [
   {
     title: 'Engineer Indy',
-    link: 'https://www.engineerindy.com',
+    link: 'https://engineer-indy.notion.site',
     thumbnail: '/img/blogs/blog-engineer-indy2.png',
     content:
       "This blog is about my interest. Ex. Technology, Programming, Engineer, Philosophy, Favorite movie, Reviews. It's my experience.",
