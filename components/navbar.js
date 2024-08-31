@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav className='flex justify-between items-center'>
         <Link href='/'>
           <a className='text-4xl font-bold'>
-            RAITEKE<span className='text-sky-500'>.</span>
+            KEERATI<span className='text-sky-500'>.</span>
           </a>
         </Link>
         <div className='hidden md:block'>

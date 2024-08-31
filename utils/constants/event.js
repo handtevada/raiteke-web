@@ -81,6 +81,14 @@ const events = [
     image: '/img/resume/zort.jpg',
     icon: <BsBriefcase />,
   },
+  {
+    iconStyle: { background: '#fff', color: '#fff' },
+    date: '19 Feb 2024',
+    desc: `Comeback..`,
+    title: 'Start working at Clicknext Co., Ltd. Again!',
+    image: '/img/resume/clicknext.png',
+    icon: <BsBriefcase />,
+  },
 ];
 
 export default events;
